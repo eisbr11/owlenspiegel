@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev_ssl": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "lint:inspect": "npx @eslint/config-inspector@latest"
   },
   "dependencies": {
+    "@storyblok/react": "^5.4.21",
     "next": "16.1.2",
     "react": "19.2.3",
     "react-dom": "19.2.3"
@@ -23,6 +25,7 @@
     "eslint": "^9.39.2",
     "eslint-config-next": "16.1.2",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.5",
     "prettier": "^3.8.0",

@@ -1,6 +1,8 @@
-import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { Metadata } from 'next';
+
 import './globals.css';
+import StoryblokProvider from '@/components/StoryblokProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,10 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
-    </html>
+    <StoryblokProvider>
+      <html lang='en'>
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          {children}
+        </body>
+      </html>
+    </StoryblokProvider>
   );
 }
